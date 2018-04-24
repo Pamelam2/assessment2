@@ -7,7 +7,7 @@ function update() {
     messages.push("First Name is required ");
     document.getElementById("firstName").classList.add("invalid");
   }else{
-    console.log("first Name filled");
+    document.getElementById("firstName").classList.remove("invalid")
   }
   
   var lastName = getValue("lastName");
@@ -15,7 +15,7 @@ function update() {
     messages.push(" Last Name is required ");
     document.getElementById("lastName").classList.add("invalid");
   }else{
-    console.log("last Name filled");
+    document.getElementById("lastName").classList.remove("invalid");
   }
   
   var emailAddress = getValue("emailAddress");
@@ -23,27 +23,29 @@ function update() {
     messages.push(" Email is required ");
     document.getElementById("emailAddress").classList.add("invalid");
   }else{
-    console.log("Email is filled");
+    document.getElementById("emailAddress").classList.remove("invalid");
   }
 
   if (emailAddress.indexOf('@') == -1) {
     messages.push('Email is missing "@" ');
     document.getElementById("emailAddress").classList.add("invalid");
   }else{
-    console.log("Email has @");
+    document.getElementById("emailAddress").classList.remove("invalid");
   }
   
   if (emailAddress.indexOf('.com') == -1) {
     messages.push('Email is missing .com ');
     document.getElementById("emailAddress").classList.add("invalid");
   }else{
-    console.log("Email has .com");
+    document.getElementById("emailAddress").classList.remove("invalid");
   }
-//below not working yet
+
   var finding = getValue("finding");
   if (finding.length==0){
     messages.push('How did you find us is required.');
     document.getElementById("finding").classList.add("invalid"); 
+  }else{
+    document.getElementById("finding").classList.remove("invalid");
   }
 
   var need = getValue("need");
@@ -51,32 +53,19 @@ function update() {
     messages.push("Why you need this blender is required. ");
     document.getElementById("need").classList.add("invalid");
   }else{
-    console.log("Email is filled");
+    document.getElementById("need").classList.remove("invalid");
   }
 
   var terms = getValue("terms");
   if (terms.checked === false){
-    messages.push('Accepting Terms required.');
-    document.getElementById("termslabel").classList.add("invalid"); 
+    messages.push("Accepting Terms and Conditions required. ");
   }
   
 
   for(var i=0; i<messages.length; i++){
-    document.getElementById("messages").innerHTML=messages;
+    document.getElementById("messages").innerHTML= messages;
   }
-/*
-  var user={
-    firstname:firstName,
-    lastname:lastName,
-    email: emailAddress,
-    fullname: function(){
-      return this.firstname + " "+ this.lastname;
-    }
-  };
-  
-//console.log(user);
-  console.log(user.fullname());
-*/
+
     
 if(messages.length!=0){
   var string = new Date();
@@ -90,7 +79,10 @@ if(messages.length!=0){
 
 
  function reset(){
-
+  messages = [];
+  document.getElementById("messages").innerHTML= messages;
+  var invalidMessages= document.getElementsByClassName("invalid");
+  invalidMessages.classList.remove("invalid");
  }
 
 
