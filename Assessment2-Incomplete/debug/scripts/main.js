@@ -56,20 +56,12 @@ $(function () {
         if (lastNameValue === '') {
             lastName.addClass('invalid');
 
-            var parentDiv = firstName.closest('#input-group');
+            var parentDiv = lastName.closest('#input-group');
             var errorSpan = parentDiv.find('.errors');
             errorSpan.show();
         }
 
-        /*if (lastNameValue < '') {
-            lastName.addClass('invalid');
-
-            var parentDiv = lastName.closest('.input-group');
-            var errorSpan = parentDiv.find('.errors');
-            errorSpan.visible();
-        }
-*/
-
+        
         /*====================================
             I need to create an object, but it's not working
             so I just commented it out.
@@ -123,10 +115,6 @@ $(function () {
 function getLength(x){
   return x.length;
 }
-
-//console.log(getLength("Please, place your string here. :)"));
-
-
 
 
 console.log('-------------Get Length----------------'); 
@@ -182,15 +170,11 @@ console.log('-----------------------------');
     console.log(foo2) //Outputs "50%"
 */
 
-
-
 function percentage(x){
   return (x*100)+"%";
 }
   
-  
-
-
+ 
 console.log('------------ Percentage-----------------');
 
 foo = percentage(.23);
@@ -215,7 +199,8 @@ console.log('------------ Add Days-----------------');
 
 
 
-
+/*
+Tried and failed. :)
 function addDays(a, b){
  var newDate =a.setDate(a.getDate() + b);
     var day = a.getDay();
@@ -229,7 +214,7 @@ function addDays(a, b){
     return newDate.toUTCString();
    
 }
-/*
+
 
 function addDays(a, b){
     var newDate = {
@@ -243,7 +228,7 @@ function addDays(a, b){
     } 
     return new Date(newDate);
   }
-*/
+
 var d = new Date('1/1/2001');
 var newD = addDays(d, 10);
 console.log(newD); //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard Time)

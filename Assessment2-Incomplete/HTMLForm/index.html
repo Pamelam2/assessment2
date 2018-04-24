@@ -4,7 +4,7 @@
     <head>
         <title>Sweepstakes</title>
         <link rel="stylesheet" href="styles/main.css">
-        <script src="scripts/main.js"></script>
+        <script src="scripts/finale.js"></script>
         
     </head>
 
@@ -60,11 +60,13 @@
                      <div class="input-group">
                         <label for="finding">How did you find us?</label>
                         <select id="finding">
+                            <optgroup>
                             <option value=""></option>
-                            <option selected="selected">Mom</option>
+                            <option>Mom</option>
                             <option>Friend</option>
                             <option>CoWorker</option>
                             <option>Instructor</option>
+                            </optgroup>
                         </select>
                     </div>
                      <div class="input-group">
@@ -74,12 +76,12 @@
                      <div class="check-group">
                
                         <input type="checkbox" name="terms" id="terms"/>
-                        <label for="terms">By checking this box you accept our terms and conditions.</label>
+                        <label for="terms" id="termslabel">By checking this box you accept our terms and conditions.</label>
                     </div>
                 </form>
                 <section class="control-panel">
-                    <button id="btnSubmit">Submit</button>
-                    <button id="btnReset">Reset</button>
+                    <input type="button" value="Submit" id="btnSubmit" />
+                    <input type="button" value="Reset" id="btnReset" />
                 </section>
 
                 </form>
@@ -94,7 +96,7 @@
                 </ul>
             </div>
         </div>
-        <script src="scripts/main.js"></script>
+        <script src="scripts/finale.js"></script>
     </body>
 
 </html>

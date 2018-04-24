@@ -126,29 +126,41 @@ ul {
 }
 
 form{
-    width: 300px;
+    width: 500px;
     margin:auto;
-    padding: 40px 20px;
+    
     font-size: 14pt;
     text-align: left;
 }
-input, select{
-    width: 400px;
+
+
+input[type="text"], input[type="textarea"], select {
+    float: right;
     box-sizing: border-box;
     padding: 10px 5px;
     font-size: 16pt;
+    width: 350px;
 }
-.input-group, .check-group{
-    padding: 20px 0;
+.input-group{
+    padding: 10px 0;
+    margin: 10px 0;
 }
+.check-group{
+    padding: 30px 0px 0px 0px;
+    margin: 20px 0;
 
+}
+optgroup{
+    font-size: 16pt;
+}
 input#terms{
     width: 20px;
+    padding: 30px 0;
 
 }
 .control-panel{
     text-align:center;
-    padding: 20px 0;f
+    padding: 10px 0;
 }
 button{
     font-size: 16pt;
@@ -164,5 +176,4 @@ button{
 .invalid{
   border: 2px solid red;
   background-color: pink;
-  color: white;
-}
+  }
